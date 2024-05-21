@@ -27,9 +27,11 @@ public class App2 {
             media = numero/vet.length;
             System.out.println("MÉDIA: "+media);
         }
+        
 else if (pergunta=='t') {
     for (int i = 0; i < 12; i++){
-        if(vet[i]>media){
+        double teste = vet[i];
+        if(teste>media){
             System.out.println(vet[i]);
         }else{System.out.println("no");}
 
@@ -41,7 +43,7 @@ else if (pergunta=='t') {
 
 
 }
-
+s.close();
     }
 
     public static void main(String[] args) {
