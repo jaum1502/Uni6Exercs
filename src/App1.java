@@ -2,16 +2,28 @@ import java.util.Scanner;
 
 public class App1 {
     public App1() {
-        Scanner s = new Scanner(System.in);
-        int[] vet = new int[10];
-        for (int i = 0; i < 10; i++) {
-            System.out.println("Valor " + (i + 1) + ": ");
-            vet[i] = s.nextInt();
+        Scanner entrada = new Scanner(System.in);
+        int tamanho = 3;
+        int vet[] = new int[tamanho];
+        vet = escreverValores(entrada, vet, tamanho);
+        imprimirValores(vet);
+        entrada.close();
+    }
+
+    public int[] escreverValores(Scanner entrada, int vet[], int tamanho) {
+
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("Vetor [" + (i) + "] - ");
+            vet[i] = entrada.nextInt();
         }
-        for (int i = 9; i >= 0; i--) {
+
+        return vet;
+    }
+
+    public void imprimirValores(int vet[]) {
+        for (int i = vet.length - 1; i >= 0; i--) {
             System.out.println(vet[i]);
         }
-        s.close();
     }
 
     public static void main(String[] args) {

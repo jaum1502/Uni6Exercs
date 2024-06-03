@@ -13,13 +13,14 @@ public class App3 {
         for (int i = 0; i < vet.length; i++) {
             if (vet[i] % 2 == 0) {
                 vet[i] = vet[i] + (vet[i] * 0.02);
-                System.out.println(vet[i]);
+                System.out.println(vet[i]+" PAR");
             } else {
                 vet[i] = vet[i] + (vet[i] * 0.05);
-                System.out.println(vet[i]);
+                System.out.println(vet[i]+" IMPAR");
             }
         }
         entrada.close();
+        
     }
 
     public static void main(String[] args) {
